@@ -39,8 +39,6 @@ app.use(function(err, req, res, next) {
     res.render('500');
 })
 
-app.get('/')
-
 app.listen(app.get('port'), function() {
     console.log('server started on http://localhost:' + app.get('port'));
 });
