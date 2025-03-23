@@ -44,3 +44,32 @@ app.get('/')
 app.listen(app.get('port'), function() {
     console.log('server started on http://localhost:' + app.get('port'));
 });
+
+
+
+// jquery method chain
+/*
+var express = require('express')
+app = express();
+handlebars = require('express-handlebars')
+    .create({defaultLayout: 'main'});
+
+app
+    .use(express.static(__dirname + '/public'))
+    .set('port', process.env.PORT || 3000)
+    .engine('handlebars', handlebars.engine)
+    .set('view engine', 'handlebars');
+
+app
+    .get('/', function(req, res) {
+        res.render('home');
+    })
+    .get('/about', function(req, res) {
+        randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+        res.render('about', {fortune: randomFortune});
+    });
+
+
+etc...
+
+*/
